@@ -19,7 +19,7 @@
         }
         .form-container {
             width: 100%;
-            max-width: 870px;
+            max-width: 100%;
             margin: 0 auto;
             background: #fff;
             border: 1px solid #ccc;
@@ -75,7 +75,6 @@
         }
         .table-container {
             width: 100%;
-            overflow-x: hidden;
         }
         table {
             border-collapse: collapse;
@@ -218,7 +217,7 @@
     <header class="header">
         <h1>KENYA REVENUE AUTHORITY</h1>
         <h2>INCOME TAX DEPARTMENT</h2>
-        <h3>INCOME TAX DEDUCTION CARD YEAR 2019</h3>
+        <h3>INCOME TAX DEDUCTION CARD YEAR {{year}}</h3>
     </header>
     <div class="employee-info">
         <table>
@@ -226,25 +225,25 @@
                 <td>
                     <div class="info-row">
                         <span class="info-label">Employer's Name:</span>
-                        <span class="info-value">ACME Group Ltd</span>
+                        <span class="info-value">{{employer_name}}</span>
                     </div>
                     <div class="info-row">
                         <span class="info-label">Employee's Main Name:</span>
-                        <span class="info-value">Muli</span>
+                        <span class="info-value">{{employee_name_main}}</span>
                     </div>
                     <div class="info-row">
                         <span class="info-label">Employee's Other Name:</span>
-                        <span class="info-value">Carol</span>
+                        <span class="info-value">{{employee_name_other}}</span>
                     </div>
                 </td>
                 <td>
                     <div class="info-row">
                         <span class="info-label">Employer's PIN:</span>
-                        <span class="info-value">P05163355A</span>
+                        <span class="info-value">{{employer_pin}}</span>
                     </div>
                     <div class="info-row">
                         <span class="info-label">Employee's PIN:</span>
-                        <span class="info-value">A004010560Y</span>
+                        <span class="info-value">{{employee_pin}}</span>
                     </div>
                 </td>
             </tr>
@@ -288,226 +287,44 @@
             </tr>
             </thead>
             <tbody>
+
+            {{#each months}}
             <tr>
-                <td class="month-column">JANUARY</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">48,000.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">20,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">159,800.00</td>
-                <td class="amount">42,004.00</td>
-                <td class="amount">1,408.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">40,596.00</td>
+                <td class="month-column">{{name}}</td>
+                <td class="amount">{{basic_salary}}</td>
+                <td class="amount">{{benefits_non_cash}}</td>
+                <td class="amount">{{value_of_quarters}}</td>
+                <td class="amount">{{gross_pay}}</td>
+                <td class="amount">{{retirement_30}}</td>
+                <td class="amount">{{retirement_actual}}</td>
+                <td class="amount">{{retirement_fixed}}</td>
+                <td class="amount">{{interest}}</td>
+                <td class="amount">{{retire_plus_interest}}</td>
+                <td class="amount">{{chargeable_pay}}</td>
+                <td class="amount">{{tax_charged}}</td>
+                <td class="amount">{{personal_relief}}</td>
+                <td class="amount">{{insurance_relief}}</td>
+                <td class="amount">{{paye}}</td>
             </tr>
-            <tr>
-                <td class="month-column">FEBRUARY</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">48,000.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">20,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">159,800.00</td>
-                <td class="amount">42,004.00</td>
-                <td class="amount">1,408.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">40,596.00</td>
-            </tr>
-            <tr>
-                <td class="month-column">MARCH</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">48,000.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">20,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">159,800.00</td>
-                <td class="amount">42,004.00</td>
-                <td class="amount">1,408.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">40,596.00</td>
-            </tr>
-            <tr>
-                <td class="month-column">APRIL</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">48,000.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">20,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">159,800.00</td>
-                <td class="amount">42,004.00</td>
-                <td class="amount">1,408.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">40,596.00</td>
-            </tr>
-            <tr>
-                <td class="month-column">MAY</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">48,000.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">20,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">159,800.00</td>
-                <td class="amount">42,004.00</td>
-                <td class="amount">1,408.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">40,596.00</td>
-            </tr>
-            <tr>
-                <td class="month-column">JUNE</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">48,000.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">20,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">159,800.00</td>
-                <td class="amount">42,004.00</td>
-                <td class="amount">1,408.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">40,596.00</td>
-            </tr>
-            <tr>
-                <td class="month-column">JULY</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">48,000.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">20,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">159,800.00</td>
-                <td class="amount">42,004.00</td>
-                <td class="amount">1,408.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">40,596.00</td>
-            </tr>
-            <tr>
-                <td class="month-column">AUGUST</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">48,000.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">20,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">159,800.00</td>
-                <td class="amount">42,004.00</td>
-                <td class="amount">1,408.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">40,596.00</td>
-            </tr>
-            <tr>
-                <td class="month-column">SEPTEMBER</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">48,000.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">20,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">159,800.00</td>
-                <td class="amount">42,004.00</td>
-                <td class="amount">1,408.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">40,596.00</td>
-            </tr>
-            <tr>
-                <td class="month-column">OCTOBER</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">48,000.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">20,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">159,800.00</td>
-                <td class="amount">42,004.00</td>
-                <td class="amount">1,408.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">40,596.00</td>
-            </tr>
-            <tr>
-                <td class="month-column">NOVEMBER</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">48,000.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">20,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">159,800.00</td>
-                <td class="amount">42,004.00</td>
-                <td class="amount">1,408.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">40,596.00</td>
-            </tr>
-            <tr>
-                <td class="month-column">DECEMBER</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">160,000.00</td>
-                <td class="amount">48,000.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">20,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">200.00</td>
-                <td class="amount">159,800.00</td>
-                <td class="amount">42,004.00</td>
-                <td class="amount">1,408.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">40,596.00</td>
-            </tr>
+
+            {{/each}}
+
             <tr class="total-row">
                 <td class="month-column">TOTAL</td>
-                <td class="amount">1,920,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">1,920,000.00</td>
-                <td class="amount">576,000.00</td>
-                <td class="amount">2,400.00</td>
-                <td class="amount">240,000.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">2,400.00</td>
-                <td class="amount">1,917,600.00</td>
-                <td class="amount">504,048.00</td>
-                <td class="amount">16,896.00</td>
-                <td class="amount">0.00</td>
-                <td class="amount">487,152.00</td>
+                <td class="amount">{{totals.basic_salary}}</td>
+                <td class="amount">{{totals.benefits_non_cash}}</td>
+                <td class="amount">{{totals.value_of_quarters}}</td>
+                <td class="amount">{{totals.gross_pay}}</td>
+                <td class="amount">{{totals.retirement_30}}</td>
+                <td class="amount">{{totals.retirement_actual}}</td>
+                <td class="amount">{{totals.retirement_fixed}}</td>
+                <td class="amount">{{totals.interest}}</td>
+                <td class="amount">{{totals.retire_plus_interest}}</td>
+                <td class="amount">{{totals.chargeable_pay}}</td>
+                <td class="amount">{{totals.tax_charged}}</td>
+                <td class="amount">{{totals.personal_relief}}</td>
+                <td class="amount">{{totals.insurance_relief}}</td>
+                <td class="amount">{{totals.paye}}</td>
             </tr>
             </tbody>
         </table>
@@ -520,12 +337,12 @@
             <table>
                 <tr>
                     <td class="footer-row">
-                        <span class="footer-label">TOTAL CHARGEABLE PAY (COL H) : </span>
-                        <span class="footer-value">Ksh. 1,438,200.00</span>
+                        <span class="footer-label">TOTAL CHARGEABLE PAY (COL H) </span>
+                        <span class="footer-value">{{footer_summary.total_chargeable}}</span>
                     </td>
                     <td class="footer-row">
-                        <span class="footer-label">TOTAL TAX (COL L) : </span>
-                        <span class="footer-value">Ksh. 363,364.00</span>
+                        <span class="footer-label">TOTAL TAX (COL L) </span>
+                        <span class="footer-value">{{footer_summary.total_tax}}</span>
                     </td>
                 </tr>
             </table>

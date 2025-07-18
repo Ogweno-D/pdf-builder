@@ -1,0 +1,247 @@
+<!--<!DOCTYPE html>-->
+<!DOCTYPE definition [<!ENTITY amp "&#38;">]>
+<html lang="en">
+<head>
+    <title> Ukulima Sacco Account Statement</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+            color: #333;
+            background: #fff;
+            margin:15px auto;
+        }
+        main{
+            max-width: 850px;
+            margin: 10px auto;
+            border: 1px #ddd solid;
+            width: 100%;
+            padding: 40px;
+        }
+        header{
+            margin-bottom: 20px;
+            border-bottom: 5px solid #5fd165;
+            width: 100%;
+            padding-bottom: 15px;
+        }
+        /*TOP OF THE TABLE*/
+        .header-table{
+            width: 100%;
+        }
+        .statement-title{
+            text-align: right;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .logo{
+            text-align: start;
+        }
+        .date-issued{
+            font-weight: bold;
+            text-align: right;
+            font-size :14px;
+            color: #666
+        }
+        .main-content{
+            display: table;
+            width: 100%;
+        }
+
+        .info-section{
+            border-bottom: #5fd165 2px solid;
+            padding-bottom: 15px;
+
+        }
+        .customer-section{
+            display: table-cell;
+            vertical-align: top;
+            width: 50%;
+            padding-right: 20px;
+        }
+        .contact-section{
+            display: table-cell;
+            vertical-align: top;
+            text-align: left;
+            width: 50%;
+            padding-left: 30px;
+        }
+        .section-title{
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .customer-name{
+            font-weight: bold;
+            font-size: 16px;
+            margin: 5px auto;
+            padding-bottom: 5px;
+        }
+        .phone-number{
+            margin-bottom: 5px;
+            color: #666;
+            padding-bottom: 5px;
+        }
+        .period{
+            margin-bottom: 10px;
+            font-weight: bolder;
+        }
+        .balance-table{
+            width: 100%;
+            line-height: 2.0;
+        }
+        .balance-table td:first-child{
+            width: 50%;
+        }
+        .balance-table td:last-child{
+            text-align: right;
+            font-weight: bold;
+        }
+        .closing-balance td{
+            border-top: #5fd165 2px solid;
+            padding: 4px
+        }
+        .contact-info{
+            font-size : 14px;
+            line-height: 2;
+        }
+        .contact-info p{
+            margin-bottom: 5px;
+        }
+        .contact-description{
+            color: #666;
+            margin: 10px 0;
+            font-size: 11px;
+        }
+
+        .transaction-section{
+            margin-top:20px;
+            width: 100%;
+        }
+        .transaction-table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px
+        }
+
+        .credit{
+            color: #5fd165;
+        }
+        .debit{
+            color: red;
+        }
+
+        .contact-section{
+        }
+        .contact-info{
+            font-size : 14px;
+            font-weight: bold;
+            padding: 5px;
+        }
+        .contact-info p{
+            margin-bottom: 5px;
+        }
+        .contact-description{
+            color: #666;
+            margin: 10px 0;
+            font-size: 12px;
+        }
+        .transaction-section {
+            margin-top:5px;
+        }
+        .transaction-table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .transaction-table th{
+            background: #5fd165;
+            color: #fff;
+            font-weight: bold;
+            text-align: left;
+            width: 15%;
+            padding: 10px 8px;
+            border: 2px #eae3e3 solid;
+        }
+        .transaction-table th:first-child{
+            width: 10%;
+        }
+        .transaction-table th.doc-col{
+            width: 10%;
+        }
+        .transaction-table th.credit-col{
+            width: 10%;
+            text-align: left;
+        }
+        .transaction-table th.debit-col{
+            width: 10%;
+        }
+        .transaction-table th.balance-col{
+            width: 10%;
+        }
+        .transaction-table td{
+            padding: 2px;
+            border : 2px solid #d6d3d2;
+        }
+        .transaction-table tr.credit-row{
+            background: #fafff9;
+        }
+        .transaction-table tr.debit-row{
+            background: #fff9f9;
+        }
+
+        .credit tr{
+            background: #5fd165;
+        }
+        .amount{
+            text-align: right;
+        }
+        .balance{
+            font-weight: bold;
+        }
+        .footer-table{
+            width: 100%;
+            padding-top: 6px;
+        }
+        .footer-value{
+            text-align: right;
+            font-weight: bold;
+        }
+        .footer-label{
+            text-align: left;
+        }
+
+        @media print{
+            body{
+                font-size: 11px;
+                margin: 0;
+            }
+            .main-container{
+                border: none;
+                padding: 15px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <span class="info-label">Employer's Name:</span>
+        <span class="info-value">{{employer_name}}</span>
+
+        <span class="info-label">Employee's Main Name:</span>
+        <span class="info-value">{{employee_name}}</span>
+
+        <span class="info-label">Employer's PIN:</span>
+        <span class="info-value">{{employer_pin}}</span>
+
+    </div>
+
+</body>
+</html>

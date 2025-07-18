@@ -1,0 +1,256 @@
+{
+  "accountStatement": {
+    "accountHolder": {
+      "name": "Mr. John Juma",
+      "phone": "+254722368794"
+    },
+    "accountInfo": {
+      "accountName": "FOSA Savings Account",
+      "accountNumber": "5050123278000",
+      "openingBalance": 25012.49,
+      "creditTotal": 1336895.00,
+      "debitTotal": 1336895.00,
+      "closingBalance": 65119.86
+    },
+    "period": {
+      "from": "7 Jan 2022",
+      "to": "2 June 2022",
+      "issuedDate": "3 June 2022"
+    },
+    "contactInfo": {
+      "website": "https://ukulima.co.ke",
+      "email": "info@ukilima.co.ke",
+      "telephone": "0709943000",
+      "hours": "8:30 am - 5:00 pm"
+    },
+    "transactions": [
+      {
+        "date": "7 Jan 2022",
+        "docNo": "QA749QPFRM",
+        "description": "Loan Repayment",
+        "credit": 20000.00,
+        "debit": null,
+        "balance": 25012.49
+      },
+      {
+        "date": "7 Jan 2022",
+        "docNo": "QA749QPFRM",
+        "description": "Loan Repayment Fee",
+        "credit": null,
+        "debit": 5.00,
+        "balance": 25007.49
+      },
+      {
+        "date": "7 Jan 2022",
+        "docNo": "QA749QPFRM",
+        "description": "Loan Repayment",
+        "credit": null,
+        "debit": 20000.00,
+        "balance": 5007.49
+      },
+      {
+        "date": "7 Jan 2022",
+        "docNo": "SPV0000175",
+        "description": "PROJECTS & PRODUCT DELIVERY STAFF ALLOWANCE",
+        "credit": 35000.00,
+        "debit": null,
+        "balance": 40007.49
+      },
+      {
+        "date": "18 Jan 2022",
+        "docNo": "10BHQ3U14",
+        "description": "Balance Enquiry: 5110123278000",
+        "credit": null,
+        "debit": 23.00,
+        "balance": 7132.69
+      },
+      {
+        "date": "11 Jan 2022",
+        "docNo": "QAB2FW8JEO",
+        "description": "M-Pesa Cash Withdrawal to 254722368794|CATHERINE",
+        "credit": null,
+        "debit": 25000.00,
+        "balance": 7244.49
+      },
+      {
+        "date": "11 Jan 2022",
+        "docNo": "QAB2FW8JEO",
+        "description": "Mpesa Withdrawal Fee",
+        "credit": null,
+        "debit": 88.80,
+        "balance": 7155.69
+      },
+      {
+        "date": "20 Jan 2022",
+        "docNo": "DEP002301",
+        "description": "Salary Deposit",
+        "credit": 45000.00,
+        "debit": null,
+        "balance": 11655.69
+      },
+      {
+        "date": "22 Jan 2022",
+        "docNo": "BILL000122",
+        "description": "Electricity Bill Payment",
+        "credit": null,
+        "debit": 2200.00,
+        "balance": 9465.69
+      },
+      {
+        "date": "25 Jan 2022",
+        "docNo": "INTJAN22",
+        "description": "Interest Credit",
+        "credit": 345.60,
+        "debit": null,
+        "balance": 9811.29
+      },
+      {
+        "date": "28 Jan 2022",
+        "docNo": "LOANPP001",
+        "description": "Loan Processing Fee",
+        "credit": null,
+        "debit": 500.00,
+        "balance": 9311.29
+      },
+      {
+        "date": "2 Feb 2022",
+        "docNo": "TXN1123W",
+        "description": "ATM Withdrawal",
+        "credit": null,
+        "debit": 5000.00,
+        "balance": 4311.29
+      },
+      {
+        "date": "5 Feb 2022",
+        "docNo": "DEP002341",
+        "description": "Salary Deposit",
+        "credit": 45000.00,
+        "debit": null,
+        "balance": 49311.29
+      },
+      {
+        "date": "10 Feb 2022",
+        "docNo": "BILL000211",
+        "description": "Water Bill Payment",
+        "credit": null,
+        "debit": 1350.00,
+        "balance": 47961.29
+      },
+      {
+        "date": "15 Feb 2022",
+        "docNo": "MP001548",
+        "description": "M-Pesa Transfer from 254711223344",
+        "credit": 12000.00,
+        "debit": null,
+        "balance": 59961.29
+      },
+      {
+        "date": "22 Feb 2022",
+        "docNo": "TXN1211",
+        "description": "Fuel Station POS",
+        "credit": null,
+        "debit": 4500.00,
+        "balance": 55461.29
+      },
+      {
+        "date": "28 Feb 2022",
+        "docNo": "INTFEB22",
+        "description": "Interest Credit",
+        "credit": 366.10,
+        "debit": null,
+        "balance": 55827.39
+      },
+      {
+        "date": "5 Mar 2022",
+        "docNo": "LOANPMT001",
+        "description": "Loan Repayment",
+        "credit": null,
+        "debit": 5000.00,
+        "balance": 50827.39
+      },
+      {
+        "date": "10 Mar 2022",
+        "docNo": "DEP002391",
+        "description": "Salary Deposit",
+        "credit": 47000.00,
+        "debit": null,
+        "balance": 97827.39
+      },
+      {
+        "date": "15 Mar 2022",
+        "docNo": "BILL000312",
+        "description": "NHIF Contribution",
+        "credit": null,
+        "debit": 1400.00,
+        "balance": 96427.39
+      },
+      {
+        "date": "18 Mar 2022",
+        "docNo": "TXN2121",
+        "description": "ATM Withdrawal",
+        "credit": null,
+        "debit": 3000.00,
+        "balance": 93427.39
+      },
+      {
+        "date": "28 Mar 2022",
+        "docNo": "INTMAR22",
+        "description": "Interest Credit",
+        "credit": 395.00,
+        "debit": null,
+        "balance": 93822.39
+      },
+      {
+        "date": "5 Apr 2022",
+        "docNo": "BILL000401",
+        "description": "Internet Payment",
+        "credit": null,
+        "debit": 2500.00,
+        "balance": 91322.39
+      },
+      {
+        "date": "12 Apr 2022",
+        "docNo": "DEP002421",
+        "description": "Dividend Payout",
+        "credit": 8000.00,
+        "debit": null,
+        "balance": 99322.39
+      },
+      {
+        "date": "18 Apr 2022",
+        "docNo": "MP004321",
+        "description": "M-Pesa Withdrawal",
+        "credit": null,
+        "debit": 10000.00,
+        "balance": 89322.39
+      },
+      {
+        "date": "30 Apr 2022",
+        "docNo": "INTAPR22",
+        "description": "Interest Credit",
+        "credit": 412.75,
+        "debit": null,
+        "balance": 89735.14
+      },
+      {
+        "date": "15 May 2022",
+        "docNo": "TXNPOS992",
+        "description": "Supermarket POS",
+        "credit": null,
+        "debit": 5000.00,
+        "balance": 84735.14
+      },
+      {
+        "date": "1 Jun 2022",
+        "docNo": "DEP002451",
+        "description": "Bonus Payment",
+        "credit": 5000.00,
+        "debit": null,
+        "balance": 89735.14
+      }
+    ],
+    "summary": {
+      "finalBalance": "651678.00"
+    }
+  }
+}
