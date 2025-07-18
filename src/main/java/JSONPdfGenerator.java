@@ -47,12 +47,12 @@ public class JSONPdfGenerator {
         generatePDFFromJson(
                 "src/main/resources/account-statements.html",
                 "src/main/resources/json/account-statement.json",
-                "src/out/json-account-statements.pdf.pdf"
+                "src/out/json-account-statements.pdf"
         );
-        generatePDFFromJson(
-                "src/main/resources/p-nine-report.html",
-                "src/main/resources/json/account-statement.json",
-                "src/out/json-p-nine-report.pdf"
-        );
+//        generatePDFFromJson(
+//                "src/main/resources/p-nine-report.html",
+//                "src/main/resources/json/p9-data.json",
+//                "src/out/json-p-nine-report.pdf"
+//        );
     }
 }
