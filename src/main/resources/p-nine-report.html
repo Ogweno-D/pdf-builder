@@ -1,10 +1,536 @@
 <!--<!DOCTYPE html>-->
-<!DOCTYPE definition [<!ENTITY amp "&#38;">]>
+<!DOCTYPE definition [<!ENTITY amp "&amp;#38;">]>
 <html lang="en">
 <head>
-    <title>P9 Report</title>
+    <title>KRA P9 FORM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            line-height: 1.2;
+            color: #000;
+            background: white;
+            padding: 10px;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 870px;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+        .header {
+            text-align: center;
+            padding: 5px;
+        }
+        .header h1 {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .header h2 {
+            font-size: 12px;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+        .header h3 {
+            font-size: 12px;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+        .employee-info {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+        }
+        .employee-info table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .employee-info td {
+            width: 50%;
+            border: none;
+            padding: 5px;
+        }
+        .info-row {
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        .info-label {
+            font-size: 14px;
+            font-weight: normal;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .info-value {
+            font-size: 12px;
+            padding: 2px;
+            width: calc(100% - 90px);
+        }
+        .table-container {
+            width: 100%;
+            overflow-x: hidden;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: inherit;
+            font-size: 10px;
+        }
+        td {
+            border: 1px solid #000;
+            padding: 1px;
+            text-align: right;
+            vertical-align: middle;
+            overflow: hidden;
+        }
+        th {
+            padding: 3px;
+            border: 1px solid #000;
+            font-weight: normal;
+            text-align: start;
+        }
+        .currency-label {
+            margin-top: 20px;
+            font-weight: normal;
+        }
+        .month-column {
+            width: 4%;
+            font-weight: bold;
+            text-align: left;
+        }
+        .amount-col{
+            width:5%
+        }
+        .sub-columns{
+            width: 6%;
+        }
+        .amount-col {
+            text-align: left;
+            padding: 4px;
+            margin: 0;
+        }
+        .total-row {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+        .sub-columns {
+            padding-top: 4px;
+            font-size: 10px;
+            line-height: 1.5;
+        }
+
+        .footer-top {
+            padding: 5px;
+            border-top: 1px solid #000;
+        }
+        .footer-top p {
+            font-size: 10px;
+            font-weight: normal;
+        }
+        .footer-info {
+            padding: 5px;
+        }
+        .footer-info table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .footer-row{
+            border: none;
+            text-align: left;
+            margin-bottom: 5px;
+            vertical-align: top;
+        }
+        .footer-row td {
+            border: none;
+            padding: 5px;
+        }
+        .footer-label {
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .footer-value {
+            font-size: 12px;
+            padding: 2px;
+            width: calc(100% - 100px);
+        }
+
+        @media print {
+            body {
+                font-size: 9px;
+                margin: 0;
+                padding: 0;
+                background: white;
+                width: 210mm; /* A4 width */
+                height: 297mm; /* A4 height */
+            }
+            .form-container {
+                max-width: 200mm; /* Fit within A4 with 10mm margins */
+                border: none;
+                padding: 5mm;
+                margin: 0;
+                box-sizing: border-box;
+                page-break-inside: avoid;
+            }
+            .table-container {
+                overflow-x: hidden; /* No scrollbar in print */
+            }
+            table {
+                width: 100%;
+                font-size: 8px;
+            }
+            td, th {
+                padding: 2px;
+            }
+            .month-column {
+                width: 20px; /* Further reduced for print */
+            }
+            .currency-label {
+                margin-top: 8px;
+                font-size: 7px;
+            }
+            .sub-columns {
+                font-size: 7px;
+                line-height: 1.3;
+            }
+            .header h1 {
+                font-size: 11px;
+            }
+            .header h2, .header h3 {
+                font-size: 9px;
+            }
+            .info-label, .info-value, .footer-label, .footer-value {
+                font-size: 9px;
+            }
+        }
+    </style>
 </head>
 <body>
-
+<div class="form-container">
+    <header class="header">
+        <h1>KENYA REVENUE AUTHORITY</h1>
+        <h2>INCOME TAX DEPARTMENT</h2>
+        <h3>INCOME TAX DEDUCTION CARD YEAR 2019</h3>
+    </header>
+    <div class="employee-info">
+        <table>
+            <tr>
+                <td>
+                    <div class="info-row">
+                        <span class="info-label">Employer's Name:</span>
+                        <span class="info-value">ACME Group Ltd</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Employee's Main Name:</span>
+                        <span class="info-value">Muli</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Employee's Other Name:</span>
+                        <span class="info-value">Carol</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="info-row">
+                        <span class="info-label">Employer's PIN:</span>
+                        <span class="info-value">P05163355A</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Employee's PIN:</span>
+                        <span class="info-value">A004010560Y</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="table-container">
+        <table>
+            <thead>
+            <tr>
+                <th rowspan="3" class="month-col">MONTH</th>
+                <th class="amount-col">Basic Salary <div class="currency-label">Kshs.</div></th>
+                <th class="amount-col">Benefits - Non Cash <div class="currency-label">Kshs.</div></th>
+                <th class="amount-col">Value of Quarters <div class="currency-label">Kshs.</div></th>
+                <th class="amount-col">Total Gross Pay <div class="currency-label">Kshs.</div></th>
+                <th colspan="3" class="sub-columns">Defined Contribution Retirement Scheme <div class="currency-label">Kshs.</div></th>
+                <th class="amount-col">Owner-Occupied Interest <div class="currency-label">Kshs.</div></th>
+                <th class="amount-col">Retired Contribution &amp; Owner Occupied Interest <div class="currency-label">Kshs.</div></th>
+                <th class="amount-col">Chargeable Pay <div class="currency-label">Kshs.</div></th>
+                <th class="amount-col">Tax Charged <div class="currency-label">Kshs.</div></th>
+                <th class="amount-col">Personal Relief <div class="currency-label">Kshs.</div></th>
+                <th class="amount-col">Insurance Relief <div class="currency-label">Kshs.</div></th>
+                <th class="amount-col">P.A.Y.E Tax (J-K) <div class="currency-label">Kshs.</div></th>
+            </tr>
+            <tr>
+                <th rowspan="2">A</th>
+                <th rowspan="2">B</th>
+                <th rowspan="2">C</th>
+                <th rowspan="2">D</th>
+                <th colspan="3">E</th>
+                <th rowspan="2">F <br/>Amount of Interest</th>
+                <th rowspan="2">G <br/>Lowest of E added to F</th>
+                <th rowspan="2">H</th>
+                <th rowspan="2">J</th>
+                <th colspan="2">K</th>
+                <th rowspan="2">L</th>
+            </tr>
+            <tr>
+                <th class="sub-columns">E1 <br/>30% of A</th>
+                <th class="sub-columns">E2 <br/>Actual</th>
+                <th class="sub-columns">E3 <br/>Fixed</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="month-column">JANUARY</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">48,000.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">20,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">159,800.00</td>
+                <td class="amount">42,004.00</td>
+                <td class="amount">1,408.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">40,596.00</td>
+            </tr>
+            <tr>
+                <td class="month-column">FEBRUARY</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">48,000.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">20,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">159,800.00</td>
+                <td class="amount">42,004.00</td>
+                <td class="amount">1,408.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">40,596.00</td>
+            </tr>
+            <tr>
+                <td class="month-column">MARCH</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">48,000.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">20,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">159,800.00</td>
+                <td class="amount">42,004.00</td>
+                <td class="amount">1,408.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">40,596.00</td>
+            </tr>
+            <tr>
+                <td class="month-column">APRIL</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">48,000.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">20,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">159,800.00</td>
+                <td class="amount">42,004.00</td>
+                <td class="amount">1,408.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">40,596.00</td>
+            </tr>
+            <tr>
+                <td class="month-column">MAY</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">48,000.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">20,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">159,800.00</td>
+                <td class="amount">42,004.00</td>
+                <td class="amount">1,408.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">40,596.00</td>
+            </tr>
+            <tr>
+                <td class="month-column">JUNE</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">48,000.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">20,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">159,800.00</td>
+                <td class="amount">42,004.00</td>
+                <td class="amount">1,408.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">40,596.00</td>
+            </tr>
+            <tr>
+                <td class="month-column">JULY</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">48,000.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">20,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">159,800.00</td>
+                <td class="amount">42,004.00</td>
+                <td class="amount">1,408.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">40,596.00</td>
+            </tr>
+            <tr>
+                <td class="month-column">AUGUST</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">48,000.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">20,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">159,800.00</td>
+                <td class="amount">42,004.00</td>
+                <td class="amount">1,408.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">40,596.00</td>
+            </tr>
+            <tr>
+                <td class="month-column">SEPTEMBER</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">48,000.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">20,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">159,800.00</td>
+                <td class="amount">42,004.00</td>
+                <td class="amount">1,408.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">40,596.00</td>
+            </tr>
+            <tr>
+                <td class="month-column">OCTOBER</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">48,000.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">20,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">159,800.00</td>
+                <td class="amount">42,004.00</td>
+                <td class="amount">1,408.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">40,596.00</td>
+            </tr>
+            <tr>
+                <td class="month-column">NOVEMBER</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">48,000.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">20,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">159,800.00</td>
+                <td class="amount">42,004.00</td>
+                <td class="amount">1,408.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">40,596.00</td>
+            </tr>
+            <tr>
+                <td class="month-column">DECEMBER</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">160,000.00</td>
+                <td class="amount">48,000.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">20,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">200.00</td>
+                <td class="amount">159,800.00</td>
+                <td class="amount">42,004.00</td>
+                <td class="amount">1,408.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">40,596.00</td>
+            </tr>
+            <tr class="total-row">
+                <td class="month-column">TOTAL</td>
+                <td class="amount">1,920,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">1,920,000.00</td>
+                <td class="amount">576,000.00</td>
+                <td class="amount">2,400.00</td>
+                <td class="amount">240,000.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">2,400.00</td>
+                <td class="amount">1,917,600.00</td>
+                <td class="amount">504,048.00</td>
+                <td class="amount">16,896.00</td>
+                <td class="amount">0.00</td>
+                <td class="amount">487,152.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="footer-top">
+        <div class="text">
+            <p>To be completed by Employer at the end of the year</p>
+        </div>
+        <div class="footer-info">
+            <table>
+                <tr>
+                    <td class="footer-row">
+                        <span class="footer-label">TOTAL CHARGEABLE PAY (COL H) : </span>
+                        <span class="footer-value">Ksh. 1,438,200.00</span>
+                    </td>
+                    <td class="footer-row">
+                        <span class="footer-label">TOTAL TAX (COL L) : </span>
+                        <span class="footer-value">Ksh. 363,364.00</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
 </body>
 </html>

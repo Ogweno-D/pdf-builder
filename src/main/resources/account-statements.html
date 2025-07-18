@@ -2,9 +2,668 @@
 <!DOCTYPE definition [<!ENTITY amp "&#38;">]>
 <html lang="en">
 <head>
-    <title>Account Statements</title>
-</head>
-<body>
+    <title> Ukulima Sacco Account Statement</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+            color: #333;
+            background: #fff;
+            margin:15px auto;
+        }
+        main{
+            max-width: 850px;
+            margin: 10px auto;
+            border: 1px #ddd solid;
+            width: 100%;
+            padding: 40px;
+        }
+        header{
+            margin-bottom: 20px;
+            border-bottom: 5px solid #5fd165;
+            width: 100%;
+            padding-bottom: 15px;
+        }
+        /*TOP OF THE TABLE*/
+        .header-table{
+            width: 100%;
+        }
+        .statement-title{
+            text-align: right;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .logo{
+            text-align: start;
+        }
+        .date-issued{
+            font-weight: bold;
+            text-align: right;
+            font-size :14px;
+            color: #666
+        }
+        .main-content{
+            display: table;
+            width: 100%;
+        }
 
+        .info-section{
+            border-bottom: #5fd165 2px solid;
+            padding-bottom: 15px;
+
+        }
+        .customer-section{
+            display: table-cell;
+            vertical-align: top;
+            width: 50%;
+            padding-right: 20px;
+        }
+        .contact-section{
+            display: table-cell;
+            vertical-align: top;
+            text-align: left;
+            width: 50%;
+            padding-left: 30px;
+        }
+        .section-title{
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .customer-name{
+            font-weight: bold;
+            font-size: 16px;
+            margin: 5px auto;
+            padding-bottom: 5px;
+        }
+        .phone-number{
+            margin-bottom: 5px;
+            color: #666;
+            padding-bottom: 5px;
+        }
+        .period{
+            margin-bottom: 10px;
+            font-weight: bolder;
+        }
+        .balance-table{
+            width: 100%;
+            line-height: 2.0;
+        }
+        .balance-table td:first-child{
+            width: 50%;
+        }
+        .balance-table td:last-child{
+            text-align: right;
+            font-weight: bold;
+        }
+        .closing-balance td{
+            border-top: #5fd165 2px solid;
+            padding: 4px
+        }
+        .contact-info{
+            font-size : 14px;
+            line-height: 2;
+        }
+        .contact-info p{
+            margin-bottom: 5px;
+        }
+        .contact-description{
+            color: #666;
+            margin: 10px 0;
+            font-size: 11px;
+        }
+
+        .transaction-section{
+            margin-top:20px;
+            width: 100%;
+        }
+        .transaction-table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px
+        }
+
+        .credit{
+            color: #5fd165;
+        }
+        .debit{
+            color: red;
+        }
+
+        .contact-section{
+        }
+        .contact-info{
+            font-size : 14px;
+            font-weight: bold;
+            padding: 5px;
+        }
+        .contact-info p{
+            margin-bottom: 5px;
+        }
+        .contact-description{
+            color: #666;
+            margin: 10px 0;
+            font-size: 12px;
+        }
+        .transaction-section {
+            margin-top:5px;
+        }
+        .transaction-table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .transaction-table th{
+            background: #5fd165;
+            color: #fff;
+            font-weight: bold;
+            text-align: left;
+            width: 15%;
+            padding: 10px 8px;
+            border: 2px #eae3e3 solid;
+        }
+        .transaction-table th:first-child{
+            width: 10%;
+        }
+        .transaction-table th.doc-col{
+            width: 10%;
+        }
+        .transaction-table th.credit-col{
+            width: 10%;
+            text-align: left;
+        }
+        .transaction-table th.debit-col{
+            width: 10%;
+        }
+        .transaction-table th.balance-col{
+            width: 10%;
+        }
+        .transaction-table td{
+            padding: 2px;
+            border : 2px solid #d6d3d2;
+        }
+        .transaction-table tr.credit-row{
+            background: #fafff9;
+        }
+        .transaction-table tr.debit-row{
+            background: #fff9f9;
+        }
+
+        .credit tr{
+            background: #5fd165;
+        }
+        .amount{
+            text-align: right;
+        }
+        .balance{
+            font-weight: bold;
+        }
+        .footer-table{
+            width: 100%;
+            padding-top: 6px;
+        }
+        .footer-value{
+            text-align: right;
+            font-weight: bold;
+        }
+        .footer-label{
+            text-align: left;
+        }
+
+        @media print{
+            body{
+                font-size: 11px;
+                margin: 0;
+            }
+            .main-container{
+                border: none;
+                padding: 15px;
+            }
+        }
+    </style>
+
+</head>
+<body >
+<main class="main-container">
+    <header>
+        <table class="header-table">
+            <tr>
+                <td class="logo">
+                    <img
+                            src="ukulima-sacco-logo.png"
+                            alt="Ukulima Sacco Logo"
+                            style="width: 200px;"
+                    />
+                </td>
+                <td class="statement-title">
+                    UKULIMA SACCO
+                </td>
+            </tr>
+        </table>
+        <table class="header-table">
+            <tr>
+                <td class="date-issued ">
+                    Date Issued : 3 June 2022
+                </td>
+            </tr>
+        </table>
+    </header>
+    <div class="main-content">
+        <div class="info-section">
+            <div class="customer-section">
+                <div class="customer-info">
+                    <div class="customer-name" style="font-weight: bold"> Mr. John Juma </div>
+                    <div class="phone-number"> +254722368794</div>
+                    <div class="period"> 7 Jan 2022 to 2 June 2022</div>
+                </div>
+                <div class="account-info">
+                    <div class="account-details" style="border-bottom: #5fd165 3px solid;  font-weight: bold; padding-bottom: 12px">
+                        FOSA Savings Account ( 5050123278000)
+                    </div>
+                    <table class="balance-table">
+                        <tr>
+                            <td> Opening Balance</td>
+                            <td>  25,012.49</td>
+                        </tr>
+                        <tr>
+                            <td> Credits </td>
+                            <td class="credit"> 1,336,895.00</td>
+                        </tr>
+                        <tr>
+                            <td> Debits </td>
+                            <td class="debit"> 1,336,895.00</td>
+                        </tr>
+                        <tr class="closing-balance">
+                            <td > Closing Balance  </td>
+                            <td> 65, 119.86 </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="contact-section">
+                <div class="section-title" style="font-weight: bold"> Contact Information</div>
+                <div class="contact-info">
+                    <div>
+                        <p><strong> Website</strong>  <a href="https://ukulima.co.ke">  https://ukulima.co,ke</a> </p>
+                        <p><strong> Email: </strong> <a href="mailto:info@ukulima.co.ke">  info@ukilima.co.ke</a> </p>
+                        <p><strong> Tel: </strong> <a href="tel:0709943000"> 0709943000 </a> </p>
+                    </div>
+
+                </div>
+                <div class="contact-description">
+                    Contact us for questions, on this statement, change of personal information, and general inquiries.
+                </div>
+                <div>
+                    <p> <strong> Mon -Fri</strong> 8:30 am - 5:00pm</p>
+                </div>
+            </div>
+        </div>
+        <div class="transaction-section">
+            <table class="transaction-table">
+                <thead>
+                <tr>
+                    <th class="date-col"> Date</th>
+                    <th class="doc-col"> Doc No</th>
+                    <th class="description-col"> Description </th>
+                    <th class="credit-col"> Credit </th>
+                    <th class="debit-col"> Debit </th>
+                    <th class="balance-col"> Balance</th>
+                </tr>
+
+                </thead>
+                <tbody>
+                <tr class="credit-row" >
+                    <td>7 Jan 2022</td>
+                    <td>QA749QPFRM</td>
+                    <td>Loan Repayment</td>
+                    <td class="amount credit">20,000.00</td>
+                    <td class="amount"></td>
+                    <td class="amount balance">25,012.49</td>
+                </tr>
+                <tr class="debit-row">
+                    <td>7 Jan 2022</td>
+                    <td>QA749QPFRM</td>
+                    <td>Loan Repayment Fee</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">5.00</td>
+                    <td class="amount balance">25,007.49</td>
+                </tr>
+                <tr class="debit-row">
+                    <td>7 Jan 2022</td>
+                    <td>QA749QPFRM</td>
+                    <td>Loan Repayment</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">20,000.00</td>
+                    <td class="amount balance">5,007.49</td>
+                </tr>
+                <tr class="debit-row">
+                    <td>7 Jan 2022</td>
+                    <td>QA749QPFRM</td>
+                    <td>Loan Repayment Fee</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">5.00</td>
+                    <td class="amount balance">25,007.49</td>
+                </tr>
+                <tr class="debit-row">
+                    <td>7 Jan 2022</td>
+                    <td>QA749QPFRM</td>
+                    <td>Loan Repayment</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">20,000.00</td>
+                    <td class="amount balance">5,007.49</td>
+                </tr>
+                <tr class="credit-row">
+                    <td>7 Jan 2022</td>
+                    <td>SPV0000175</td>
+                    <td>PROJECTS &amp; PRODUCT DELIVERY STAFF ALLOWANCE</td>
+                    <td class="amount credit">35,000.00</td>
+                    <td class="amount"></td>
+                    <td class="amount balance">40,007.49</td>
+                </tr>
+                <tr class="debit-row">
+                    <td>18 Jan 2022</td>
+                    <td>10BHQ3U14</td>
+                    <td>Balance Enquiry: 5110123278000</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">23.00</td>
+                    <td class="amount balance">7,132.69</td>
+                </tr>
+                <tr class="debit-row">
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>M-Pesa Cash Withdrawal to 254722368794|CATHERINE</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">25,000.00</td>
+                    <td class="amount balance">7,244.49</td>
+                </tr>
+                <tr class="credit-row">
+                    <td>7 Jan 2022</td>
+                    <td>SPV0000175</td>
+                    <td>PROJECTS &amp; PRODUCT DELIVERY STAFF ALLOWANCE</td>
+                    <td class="amount credit">35,000.00</td>
+                    <td class="amount"></td>
+                    <td class="amount balance">40,007.49</td>
+                </tr>
+                <tr class="debit-row">
+                    <td>18 Jan 2022</td>
+                    <td>10BHQ3U14</td>
+                    <td>Balance Enquiry: 5110123278000</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">23.00</td>
+                    <td class="amount balance">7,132.69</td>
+                </tr>
+                <tr class="debit-row">
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>M-Pesa Cash Withdrawal to 254722368794|CATHERINE</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">25,000.00</td>
+                    <td class="amount balance">7,244.49</td>
+                </tr>
+                <tr>
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>Mpesa Withdrawal Fee</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">88.80</td>
+                    <td class="amount balance">7,155.69</td>
+                </tr>
+                <tr>
+                    <td>18 Jan 2022</td>
+                    <td>10BHQ3U14</td>
+                    <td>Balance Enquiry: 5110123278000</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">23.00</td>
+                    <td class="amount balance">7,132.69</td>
+                </tr>
+                <tr>
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>M-Pesa Cash Withdrawal to 254722368794|CATHERINE</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">25,000.00</td>
+                    <td class="amount balance">7,244.49</td>
+                </tr>
+                <tr class="credit-row">
+                    <td>7 Jan 2022</td>
+                    <td>SPV0000175</td>
+                    <td>PROJECTS &amp; PRODUCT DELIVERY STAFF ALLOWANCE</td>
+                    <td class="amount credit">35,000.00</td>
+                    <td class="amount"></td>
+                    <td class="amount balance">40,007.49</td>
+                </tr>
+                <tr>
+                    <td>18 Jan 2022</td>
+                    <td>10BHQ3U14</td>
+                    <td>Balance Enquiry: 5110123278000</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">23.00</td>
+                    <td class="amount balance">7,132.69</td>
+                </tr>
+                <tr>
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>M-Pesa Cash Withdrawal to 254722368794|CATHERINE</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">25,000.00</td>
+                    <td class="amount balance">7,244.49</td>
+                </tr>
+                <tr>
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>Mpesa Withdrawal Fee</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">88.80</td>
+                    <td class="amount balance">7,155.69</td>
+                </tr>
+                <tr>
+                    <td>18 Jan 2022</td>
+                    <td>10BHQ3U14</td>
+                    <td>Balance Enquiry: 5110123278000</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">23.00</td>
+                    <td class="amount balance">7,132.69</td>
+                </tr>
+                <tr class="debit-row">
+                    <td>7 Jan 2022</td>
+                    <td>QA749QPFRM</td>
+                    <td>Loan Repayment Fee</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">5.00</td>
+                    <td class="amount balance">25,007.49</td>
+                </tr>
+                <tr class="debit-row">
+                    <td>7 Jan 2022</td>
+                    <td>QA749QPFRM</td>
+                    <td>Loan Repayment</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">20,000.00</td>
+                    <td class="amount balance">5,007.49</td>
+                </tr>
+                <tr class="credit-row">
+                    <td>7 Jan 2022</td>
+                    <td>SPV0000175</td>
+                    <td>PROJECTS &amp; PRODUCT DELIVERY STAFF ALLOWANCE</td>
+                    <td class="amount credit">35,000.00</td>
+                    <td class="amount"></td>
+                    <td class="amount balance">40,007.49</td>
+                </tr>
+                <tr class="debit-row">
+                    <td>7 Jan 2022</td>
+                    <td>SPV0000175</td>
+                    <td>Withholding Tax-PROJECTS &amp; PRODUCT DELIVERY STAFF</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">7,500.00</td>
+                    <td class="amount balance">32,507.49</td>
+                </tr>
+                <tr class="debit-row">
+                    <td>7 Jan 2022</td>
+                    <td>SPV0000175</td>
+                    <td>Allowances Processing Fee</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">200.00</td>
+                    <td class="amount balance">32,307.49</td>
+                </tr>
+                <tr class="debit-row">
+                    <td>7 Jan 2022</td>
+                    <td>SPV0000175</td>
+                    <td>Allowances Processing Fee Excise Duty</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">40.00</td>
+                    <td class="amount balance">32,267.49</td>
+                </tr>
+                <tr class="debit-row">
+                    <td>7 Jan 2022</td>
+                    <td>ZYCU1U7</td>
+                    <td>Balance Enquiry: 5050123278000</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">23.00</td>
+                    <td class="amount balance">32,244.49</td>
+                </tr>
+                <tr class="debit-row">
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>M-Pesa Cash Withdrawal to 254722368794|CATHERINE</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">25,000.00</td>
+                    <td class="amount balance">7,244.49</td>
+                </tr>
+                <tr>
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>Mpesa Withdrawal Fee</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">88.80</td>
+                    <td class="amount balance">7,155.69</td>
+                </tr>
+                <tr>
+                    <td>18 Jan 2022</td>
+                    <td>10BHQ3U14</td>
+                    <td>Balance Enquiry: 5110123278000</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">23.00</td>
+                    <td class="amount balance">7,132.69</td>
+                </tr>
+                <tr>
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>M-Pesa Cash Withdrawal to 254722368794|CATHERINE</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">25,000.00</td>
+                    <td class="amount balance">7,244.49</td>
+                </tr>
+                <tr>
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>Mpesa Withdrawal Fee</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">88.80</td>
+                    <td class="amount balance">7,155.69</td>
+                </tr>
+                <tr>
+                    <td>18 Jan 2022</td>
+                    <td>10BHQ3U14</td>
+                    <td>Balance Enquiry: 5110123278000</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">23.00</td>
+                    <td class="amount balance">7,132.69</td>
+                </tr>
+                <tr>
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>M-Pesa Cash Withdrawal to 254722368794|CATHERINE</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">25,000.00</td>
+                    <td class="amount balance">7,244.49</td>
+                </tr>
+                <tr>
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>Mpesa Withdrawal Fee</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">88.80</td>
+                    <td class="amount balance">7,155.69</td>
+                </tr>
+                <tr>
+                    <td>18 Jan 2022</td>
+                    <td>10BHQ3U14</td>
+                    <td>Balance Enquiry: 5110123278000</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">23.00</td>
+                    <td class="amount balance">7,132.69</td>
+                </tr>
+                <tr>
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>M-Pesa Cash Withdrawal to 254722368794|CATHERINE</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">25,000.00</td>
+                    <td class="amount balance">7,244.49</td>
+                </tr>
+                <tr>
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>Mpesa Withdrawal Fee</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">88.80</td>
+                    <td class="amount balance">7,155.69</td>
+                </tr>
+                <tr>
+                    <td>18 Jan 2022</td>
+                    <td>10BHQ3U14</td>
+                    <td>Balance Enquiry: 5110123278000</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">23.00</td>
+                    <td class="amount balance">7,132.69</td>
+                </tr>
+                <tr>
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>M-Pesa Cash Withdrawal to 254722368794|CATHERINE</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">25,000.00</td>
+                    <td class="amount balance">7,244.49</td>
+                </tr>
+                <tr>
+                    <td>11 Jan 2022</td>
+                    <td>QAB2FW8JEO</td>
+                    <td>Mpesa Withdrawal Fee</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">88.80</td>
+                    <td class="amount balance">7,155.69</td>
+                </tr>
+                <tr>
+                    <td>18 Jan 2022</td>
+                    <td>10BHQ3U14</td>
+                    <td>Balance Enquiry: 5110123278000</td>
+                    <td class="amount"></td>
+                    <td class="amount debit">23.00</td>
+                    <td class="amount balance">7,132.69</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <table class="footer-table">
+            <tr>
+                <td class="footer-label"  style="font-weight: bold;">
+                    Account Balance
+                </td>
+                <td class="footer-value">
+                    65,1678.00
+                </td>
+            </tr>
+        </table>
+    </footer>
+</main>
 </body>
 </html>

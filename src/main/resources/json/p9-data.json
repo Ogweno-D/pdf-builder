@@ -1,0 +1,58 @@
+{
+  "employer_name": "ACME Group Ltd",
+  "employer_pin": "P05163355A",
+  "employee_name_main": "Muli",
+  "employee_name_other": "Carol",
+  "employee_pin": "A004010560Y",
+  "year": "2019",
+  "months": [
+    {
+      "name": "JANUARY",
+      "basic_salary": "160,000.00",
+      "benefits_non_cash": "0.00",
+      "value_of_quarters": "0.00",
+      "gross_pay": "160,000.00",
+      "retirement_30": "48,000.00",
+      "retirement_actual": "200.00",
+      "retirement_fixed": "20,000.00",
+      "interest": "0.00",
+      "retire_plus_interest": "200.00",
+      "chargeable_pay": "159,800.00",
+      "tax_charged": "42,004.00",
+      "personal_relief": "1,408.00",
+      "insurance_relief": "0.00",
+      "paye": "40,596.00"
+    },
+    { "name": "FEBRUARY", "basic_salary": "160,000.00", "benefits_non_cash": "0.00", "value_of_quarters": "0.00", "gross_pay": "160,000.00", "retirement_30": "48,000.00", "retirement_actual": "200.00", "retirement_fixed": "20,000.00", "interest": "0.00", "retire_plus_interest": "200.00", "chargeable_pay": "159,800.00", "tax_charged": "42,004.00", "personal_relief": "1,408.00", "insurance_relief": "0.00", "paye": "40,596.00" },
+    { "name": "MARCH", "basic_salary": "160,000.00", "benefits_non_cash": "0.00", "value_of_quarters": "0.00", "gross_pay": "160,000.00", "retirement_30": "48,000.00", "retirement_actual": "200.00", "retirement_fixed": "20,000.00", "interest": "0.00", "retire_plus_interest": "200.00", "chargeable_pay": "159,800.00", "tax_charged": "42,004.00", "personal_relief": "1,408.00", "insurance_relief": "0.00", "paye": "40,596.00" },
+    { "name": "APRIL", "basic_salary": "160,000.00", "benefits_non_cash": "0.00", "value_of_quarters": "0.00", "gross_pay": "160,000.00", "retirement_30": "48,000.00", "retirement_actual": "200.00", "retirement_fixed": "20,000.00", "interest": "0.00", "retire_plus_interest": "200.00", "chargeable_pay": "159,800.00", "tax_charged": "42,004.00", "personal_relief": "1,408.00", "insurance_relief": "0.00", "paye": "40,596.00" },
+    { "name": "MAY", "basic_salary": "160,000.00", "benefits_non_cash": "0.00", "value_of_quarters": "0.00", "gross_pay": "160,000.00", "retirement_30": "48,000.00", "retirement_actual": "200.00", "retirement_fixed": "20,000.00", "interest": "0.00", "retire_plus_interest": "200.00", "chargeable_pay": "159,800.00", "tax_charged": "42,004.00", "personal_relief": "1,408.00", "insurance_relief": "0.00", "paye": "40,596.00" },
+    { "name": "JUNE", "basic_salary": "160,000.00", "benefits_non_cash": "0.00", "value_of_quarters": "0.00", "gross_pay": "160,000.00", "retirement_30": "48,000.00", "retirement_actual": "200.00", "retirement_fixed": "20,000.00", "interest": "0.00", "retire_plus_interest": "200.00", "chargeable_pay": "159,800.00", "tax_charged": "42,004.00", "personal_relief": "1,408.00", "insurance_relief": "0.00", "paye": "40,596.00" },
+    { "name": "JULY", "basic_salary": "160,000.00", "benefits_non_cash": "0.00", "value_of_quarters": "0.00", "gross_pay": "160,000.00", "retirement_30": "48,000.00", "retirement_actual": "200.00", "retirement_fixed": "20,000.00", "interest": "0.00", "retire_plus_interest": "200.00", "chargeable_pay": "159,800.00", "tax_charged": "42,004.00", "personal_relief": "1,408.00", "insurance_relief": "0.00", "paye": "40,596.00" },
+    { "name": "AUGUST", "basic_salary": "160,000.00", "benefits_non_cash": "0.00", "value_of_quarters": "0.00", "gross_pay": "160,000.00", "retirement_30": "48,000.00", "retirement_actual": "200.00", "retirement_fixed": "20,000.00", "interest": "0.00", "retire_plus_interest": "200.00", "chargeable_pay": "159,800.00", "tax_charged": "42,004.00", "personal_relief": "1,408.00", "insurance_relief": "0.00", "paye": "40,596.00" },
+    { "name": "SEPTEMBER", "basic_salary": "160,000.00", "benefits_non_cash": "0.00", "value_of_quarters": "0.00", "gross_pay": "160,000.00", "retirement_30": "48,000.00", "retirement_actual": "200.00", "retirement_fixed": "20,000.00", "interest": "0.00", "retire_plus_interest": "200.00", "chargeable_pay": "159,800.00", "tax_charged": "42,004.00", "personal_relief": "1,408.00", "insurance_relief": "0.00", "paye": "40,596.00" },
+    { "name": "OCTOBER", "basic_salary": "160,000.00", "benefits_non_cash": "0.00", "value_of_quarters": "0.00", "gross_pay": "160,000.00", "retirement_30": "48,000.00", "retirement_actual": "200.00", "retirement_fixed": "20,000.00", "interest": "0.00", "retire_plus_interest": "200.00", "chargeable_pay": "159,800.00", "tax_charged": "42,004.00", "personal_relief": "1,408.00", "insurance_relief": "0.00", "paye": "40,596.00" },
+    { "name": "NOVEMBER", "basic_salary": "160,000.00", "benefits_non_cash": "0.00", "value_of_quarters": "0.00", "gross_pay": "160,000.00", "retirement_30": "48,000.00", "retirement_actual": "200.00", "retirement_fixed": "20,000.00", "interest": "0.00", "retire_plus_interest": "200.00", "chargeable_pay": "159,800.00", "tax_charged": "42,004.00", "personal_relief": "1,408.00", "insurance_relief": "0.00", "paye": "40,596.00" },
+    { "name": "DECEMBER", "basic_salary": "160,000.00", "benefits_non_cash": "0.00", "value_of_quarters": "0.00", "gross_pay": "160,000.00", "retirement_30": "48,000.00", "retirement_actual": "200.00", "retirement_fixed": "20,000.00", "interest": "0.00", "retire_plus_interest": "200.00", "chargeable_pay": "159,800.00", "tax_charged": "42,004.00", "personal_relief": "1,408.00", "insurance_relief": "0.00", "paye": "40,596.00" }
+  ],
+  "totals": {
+    "basic_salary": "1,920,000.00",
+    "benefits_non_cash": "0.00",
+    "value_of_quarters": "0.00",
+    "gross_pay": "1,920,000.00",
+    "retirement_30": "576,000.00",
+    "retirement_actual": "2,400.00",
+    "retirement_fixed": "240,000.00",
+    "interest": "0.00",
+    "retire_plus_interest": "2,400.00",
+    "chargeable_pay": "1,917,600.00",
+    "tax_charged": "504,048.00",
+    "personal_relief": "16,896.00",
+    "insurance_relief": "0.00",
+    "paye": "487,152.00"
+  },
+  "footer_summary": {
+    "total_chargeable": "1,438,200.00",
+    "total_tax": "363,364.00"
+  }
+}
