@@ -29,8 +29,8 @@ public class Main {
     public static void main(String[] args) {
         try {
             // From HTML File
-            generatePDFFromHTMLFile("C:\\Users\\Ogweno\\Desktop\\SkyWorld\\Frontend\\pdf-builder\\src\\main\\resources\\account-statements.html", "C:\\Users\\Ogweno\\Desktop\\SkyWorld\\Frontend\\pdf-builder\\src\\out\\account-statements.pdf");
-            generatePDFFromHTMLFile("C:\\Users\\Ogweno\\Desktop\\SkyWorld\\Frontend\\pdf-builder\\src\\main\\resources\\p-nine-report.html", "C:\\Users\\Ogweno\\Desktop\\SkyWorld\\Frontend\\pdf-builder\\src\\out\\KRAp9.pdf");
+            generatePDFFromHTMLFile("src/main/resources/account-statements.html", "src/out/account-statements.pdf");
+            generatePDFFromHTMLFile("src/main/resources/p-nine-report.html", "src/out/KRAp9.pdf");
             // Output pdf code...
 
         } catch (Exception e) {

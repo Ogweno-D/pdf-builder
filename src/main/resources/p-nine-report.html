@@ -4,6 +4,10 @@
 <head>
     <title>KRA P9 FORM</title>
     <style>
+        @page {
+            size: A4 landscape;
+            margin: 1cm;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -169,11 +173,11 @@
                 margin: 0;
                 padding: 0;
                 background: white;
-                width: 210mm; /* A4 width */
-                height: 297mm; /* A4 height */
+                width: 210mm;
+                height: 297mm;
             }
             .form-container {
-                max-width: 200mm; /* Fit within A4 with 10mm margins */
+                max-width: 200mm;
                 border: none;
                 padding: 5mm;
                 margin: 0;
@@ -181,7 +185,7 @@
                 page-break-inside: avoid;
             }
             .table-container {
-                overflow-x: hidden; /* No scrollbar in print */
+                overflow-x: hidden;
             }
             table {
                 width: 100%;
